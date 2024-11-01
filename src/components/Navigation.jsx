@@ -28,14 +28,14 @@ export default function Example() {
               <XMarkIcon aria-hidden="true" className="hidden h-6 w-6 group-data-[open]:block" />
             </DisclosureButton>
           </div>
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between mt-20">
-            <div className="flex flex-shrink-0 items-center">
+          <div className="flex flex-1 items-center justify-between">
+            <div className="flex items-center justify-between w-full sm:w-auto">
               <img
                 alt="MSUKC"
                 src={Logo}
-                className="h-10 w-auto"
+                className="h-14 lg:h-10 w-auto mx-auto mt-2 lg:mt-0 sm:mx-0" // Center logo on small screens
               />
-              <h1 className='font-extrabold text-2xl ml-1'>MSUKC</h1>
+              <h1 className='font-fantasy-bold text-xl ml-1 hidden md:block'>MSUKC</h1>
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex justify-center space-x-4"> {/* Centering the nav items */}
@@ -45,8 +45,8 @@ export default function Example() {
                     href={item.href}
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
-                      item.current ? ' text-white' : 'text-black hover:text-red-900',
-                      'rounded-md px-3 py-2 text-lg font-medium',
+                      item.current ? 'text-white' : 'text-black hover:text-red-900 ',
+                      'text-sm/4 text-gray-900 rounded-md px-3 py-2 text-md font-medium hover:text-headings ',
                     )}
                   >
                     {item.name}
@@ -59,7 +59,7 @@ export default function Example() {
             {/* Profile dropdown */}
             <Menu as="div" className="relative ml-3">
               <div>
-                <MenuButton className="relative flex rounded-full mt-20 bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">Open user menu</span>
                   <div
@@ -74,17 +74,16 @@ export default function Example() {
                 className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]: duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
               >
                 <MenuItem>
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
-                    Your Profile
-                  </a>
+                  <a href="#" className="block px-4 py-2 text-sm font-roboto text-black data-[focus]:bg-gray-100">
+                    Your Profile </a>
                 </MenuItem>
                 <MenuItem>
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
+                  <a href="#" className="block px-4 py-2 text-sm font-roboto text-black data-[focus]:bg-gray-100">
                     Settings
                   </a>
                 </MenuItem>
                 <MenuItem>
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
+                  <a href="#" className="block px-4 py-2 text-sm font-roboto text-black data-[focus]:bg-gray-100">
                     Sign out
                   </a>
                 </MenuItem>
